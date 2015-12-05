@@ -46,6 +46,16 @@ section {
             border-radius: 2px;
             margin: 60px 30px 60px;
             box-shadow: 0px 0px 30px 0px rgba(#000,0.25);
+
+            // fixed corner test
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            //transform: scale(0.5);
+            margin: 0;
+            width: 360px;
+            height: 202px;
+            box-shadow: 0px 0px 30px 0px rgba(#000,0.5);
         }
     }
 
