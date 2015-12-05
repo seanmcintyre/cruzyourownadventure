@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import sortable from 'jquery-ui/sortable'
-import {player} from './player.js';
-import {networkManager} from './networking.js';
+import {player} from '../player/player.js';
+import {networkManager} from '../networkManager/networkManager.js';
 
 export var editor = {
     init: function() {

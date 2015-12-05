@@ -1,0 +1,16 @@
+#player {
+    background: url(https://cdn.tedcruz.org/wp-content/uploads/2015/03/HeaderImageCruzIowa.jpg);
+    background-position: left top;
+}
+
+.tempToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    z-index: 9999;
+    cursor: pointer;
+}

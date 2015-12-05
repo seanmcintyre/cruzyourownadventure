@@ -1,6 +1,7 @@
-@import 'setup';
-@import './player/';
-@import './timeline/';
+@import './modules/_base';
+@import './modules/player/';
+@import './modules/timeline/';
+@import './modules/credits/';
 
 .appHeader {
     background-color: #FFF;
@@ -47,15 +48,16 @@ section {
             margin: 60px 30px 60px;
             box-shadow: 0px 0px 30px 0px rgba(#000,0.25);
 
-            // fixed corner test
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            //transform: scale(0.5);
-            margin: 0;
-            width: 360px;
-            height: 202px;
-            box-shadow: 0px 0px 30px 0px rgba(#000,0.5);
+            &.fixed {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                //transform: scale(0.5);
+                margin: 0;
+                width: 360px;
+                height: 202px;
+                box-shadow: 0px 0px 30px 0px rgba(#000,0.5);
+            }
         }
     }
 
@@ -186,8 +188,10 @@ section {
             }
             img {
                 width: 12%;
-                margin: 1px -1px;
+                margin: 0.5px;
+                float: left;
                 padding: 0;
+                display: inline-block;
                 @media screen and (max-width: 1200px) {
                     width: 18%;
                 }
@@ -317,34 +321,14 @@ section {
             }
         }
     }
-    &#credits {
-        padding-bottom: 60px;
-        display: none;
-        h2 {
-            font-family: Georgia;
-            font-style: italic;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        a.awesome {
-            color: #fff;
-            font-weight: 900;
-            font-size: 24px;
-            padding: 15px;
-            margin-left: 15px;
-            width: 20%;
-            display: inline-block;
-            border: 1px solid #444;
-        }
-    }
 }
 
-footer {
-    background: red;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+// footer {
+//     background: red;
+//     position: fixed;
+//     bottom: 0;
+//     width: 100%;
+// }
 
 @media screen and (max-width: 900px) {
     section#player {
