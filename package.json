@@ -22,6 +22,12 @@
     "McConnell",
     "mcconnelling"
   ],
+  "dependencies": {
+    "express": "~3.4.8",
+    "mongodb": "~2.0.44",
+    "underscore": "~1.6.0"
+
+  },
   "devDependencies": {
     "babel": "^6.1.18",
     "babel-core": "^6.1.21",

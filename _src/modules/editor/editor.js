@@ -2,6 +2,7 @@ import $ from 'jquery';
 import sortable from 'jquery-ui/sortable'
 import {player} from '../player/player.js';
 import {networkManager} from '../networkManager/networkManager.js';
+import {mcconnelling} from '../mcconnelling/mcconnelling.js'
 
 export var editor = {
     init: function() {

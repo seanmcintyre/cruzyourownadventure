@@ -5,7 +5,7 @@ var express = require('express'),
     _       = require('underscore');
 
 var app = express();
-app.use(express.static(__dirname + '/../www'));
+app.use(express.static(__dirname + '/../root'));
 app.use(express.json());
 
 var template;
@@ -112,12 +112,13 @@ app.post('/mcconnells', function (req, res) {
         views: 0
     };
 
-    saveMcconnell(mcconnell, function (err, doc) {
-        if (err) {
+    saveMcconnell(mcconnell, function (err, result) {
+        if (err || !result || !result["ops"]) {
             console.error(err);
             return res.send(500, {error: 'something went wrong'});
         }
 
+        var doc = result["ops"]
         res.send(doc);
     });
 });
