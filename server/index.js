@@ -10,7 +10,7 @@ app.use(express.json());
 
 var template;
 
-fs.readFile(__dirname + '/template.html', function (err, file) {
+fs.readFile(__dirname + '/../root/template.html', function (err, file) {
     template = _.template(file.toString());
 });
 
@@ -68,7 +68,7 @@ app.get('/view', function (req, res) {
             }
             console.log(mostViewed);
             var context = {
-                title: mcconnell.title || 'McConnelling.org',
+                title: mcconnell.title || 'CruzYourOwnAdventure.org',
                 mcconnell: mcconnell,
                 id: id,
                 mostViewed: mostViewed

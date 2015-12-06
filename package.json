@@ -24,9 +24,9 @@
   ],
   "dependencies": {
     "express": "~3.4.8",
+    "gulp-mustache": "^2.0.2",
     "mongodb": "~2.0.44",
     "underscore": "~1.6.0"
-
   },
   "devDependencies": {
     "babel": "^6.1.18",

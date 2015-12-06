@@ -5,10 +5,10 @@ var config          = require('../config'),
     bs              = require('browser-sync').create('bs1');
 
 // Watch files with BrowserSync server
-gulp.task('serve', ['templates', 'scripts', 'styles', 'bs'], function() {
+gulp.task('serve', ['html:dev', 'scripts', 'styles', 'bs'], function() {
    gulp.watch(config.styles, ['styles'], bs.reload);
    gulp.watch(config.scripts, ['scripts'], bs.reload);
-   gulp.watch(config.templates.src, ['templates'], bs.reload);
+   gulp.watch(config.templates.src, ['html'], bs.reload);
 });
 
 // BrowserSync server
@@ -23,7 +23,3 @@ gulp.task('bs', function() {
   });
 });
 
-gulp.task('templates', function() {
-  return gulp.src(config.templates.src)
-    .pipe(gulp.dest(config.templates.dest));
-});

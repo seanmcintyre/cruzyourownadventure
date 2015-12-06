@@ -16,6 +16,11 @@ var config = {
         dest: './root/'
     },
 
+    sourceURL: {
+        local: '_',
+        remote: 'http://cruzyourownadventure.s3-website-us-east-1.amazonaws.com'
+    },
+
     jshint: {
         'esnext': true,
         'predef': [ 'angular', 'beforeEach', 'it', 'expect', 'describe', 'sessionStorage' ]

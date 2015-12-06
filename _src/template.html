@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#CruzYourOwnAdventure | CruzYourOwnAdventure.org</title>
+
+    <link rel="author" href="https://plus.google.com/explore/cruzyourownadventure"/>
+    <link rel="publisher" href="https://plus.google.com/explore/cruzyourownadventure"/>
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="#CruzYourOwnAdventure | <%= title %>">
+    <meta itemprop="description" content="The official unofficial #CruzYourOwnAdventure generator">
+    <meta itemprop="image" content="">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="http://cruzyourownadventure.s3-website-us-east-1.amazonaws.com/img/<%= mcconnell.clips[0] %>.jpg">
+    <meta name="twitter:site" content="@publisher_handle">
+    <meta name="twitter:title" content="#CruzYourOwnAdventure | <%= title %>">
+    <meta name="twitter:description" content="The official unofficial #CruzYourOwnAdventure generator">
+    <meta name="twitter:creator" content="@seanmcintyre">
+    <meta name="twitter:creator" content="@maxmamis">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="#CruzYourOwnAdventure | <%= title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.cruzyourownadventure.org/view?_id=<%= id %>" />
+    <meta property="og:image" content="http://cruzyourownadventure.s3-website-us-east-1.amazonaws.com/img/<%= mcconnell.clips[0] %>.jpg" />
+    <meta property="og:description" content="The official unofficial #CruzYourOwnAdventure generator" />
+    <meta property="og:site_name" content="#CruzYourOwnAdventure" />
+    <meta property="fb:admins" content="" />
+
+    <link rel="stylesheet" href="{{{SRC_ROOT}}}/app.min.css">
+</head>
+    <body class="player_showing">
+
+        <div class="tempToggle">tog</div>
+
+        <header class="appHeader">
+            <nav>
+                <h1 class="logo">CruzPAC 2016</h1>
+                <a href="" class="donate">Donate</a>
+<!--             
+                <div class="inner">
+                    <h3 class="masthead-brand">CruzYourOwnAdventure.org</h3>
+                    <ul class="nav masthead-nav">
+                        <li class="active"><a href="#">Make</a></li>
+                        <li><a href="#">Watch</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+
+ -->            </nav>
+        </header>
+
+        <div class="YT-TEST">
+            <div id="audioplayer"></div>
+        </div>
+        <section id="player">
+        </section>
+        <h3 class='solo-title'><%= title %></h1>
+        <p class='lead solo'>
+            <!-- <a href='#' id='solo-share' class='btn btn-lg btn-default start-editor'>Share This</a> -->
+            <a href='/' id='solo-make' class='btn btn-lg btn-default start-editor'>Make Your Own</a>
+            <ul class='share-buttons'>
+                <li class='fb'>
+                    <div class="fb-share-button" data-href="http://cruzyourownadventure.org/view?_id=<%= id %>" data-type="button"></div>
+                </li>
+                <li class='tw'>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-related="" data-lang="en" data-size="medium" data-count="none">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </li>
+            </ul>
+        </p>
+
+        <section id="gallery">
+            <div class="inner">
+                <section class="popular">
+                    <h3>Most viewed</h3>
+                    <ul>
+                        <% _.each(mostViewed, function (mcconnell) { %>
+                            <li class='video'><a href='/view?_id=<%= mcconnell._id %>'><%= mcconnell.title %></a></li>
+                        <% }); %>
+<!--                        <li class="video">Creep</li>
+                        <li class="video">Let It Go</li>
+                        <li class="video">Dark Horse</li>
+                        <li class="video">Wrecking Ball</li>
+ -->                    </ul>
+                </section>
+            </div>
+        </section>
+        <footer id="credits">
+            <h2>Design & Development by</h2>
+            <a href="http://twitter.com/maxmamis" class="awesome"><img src="" alt="" class="avatar">Max</a>
+            <a href="http://twitter.com/seanmcintyre" class="awesome"><img src="" alt="" class="avatar">Sean</a>
+        </footer>
+        <script src="{{{SRC_ROOT}}}/app.min.js"></script>
+    </body>
+</html>
