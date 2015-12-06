@@ -124,4 +124,4 @@ app.post('/mcconnells', function (req, res) {
 });
 
 app.listen(config.port);
-console.log('Now Mcconnelling on port ' + config.port);
+console.log('Now Cruzing on port ' + config.port);
